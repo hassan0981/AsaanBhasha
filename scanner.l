@@ -1,31 +1,21 @@
 %{
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <string.h>   
 
-FILE *tokenization;
+FILE *tokens;
 FILE *errors;
 
-int is_keyword(const char *s) {
-    const char *kw[] = {
+int is_keyword(const char *word) 
+{
+    char *keywords[] = {
         "agar","warna","bolay","warnaagar","Hukamkaray","thehrjao",
         "ank","shabt","jabtuk","Hannaa","Shudh","jhoot",
         "lotaao","challay","karo"
     };
-    size_t n = sizeof(kw)/sizeof(kw[0]);
-    for (size_t i = 0; i < n; i++) {
-        const char *a = s;
-        const char *b = kw[i];
-        int same = 1;
-        while (*a || *b) {
-            if (*a != *b) {
-                same = 0;
-                break;
-            }
-            a++;
-            b++;
-        }
-        if (same && *a == '\0' && *b == '\0')
+    int n = sizeof(keywords)/sizeof(keywords[0]);
+
+    for (int i = 0; i < n; i++) {
+        if (strcmp(word, keywords[i]) == 0)
             return 1;
     }
     return 0;
@@ -33,108 +23,77 @@ int is_keyword(const char *s) {
 %}
 
 %option noyywrap
-
 %option yylineno
 
-LETTER     [A-Za-z]
+LETTER  [A-Za-z]
 
-DIGIT      [0-9]
+DIGIT   [0-9]
 
-STR        \"([^\"\\]|\\.)*\"
+ID      {LETTER}({LETTER}|{DIGIT})*
 
-FRAC       \.{DIGIT}+
+NUMBER  {DIGIT}+(\.{DIGIT}+)?([eE][+-]?{DIGIT}+)? 
 
-CHAR       \'([^\'\\]|\\.)\'
+STR     \"([^\"\\]|\\.)*\"
 
-NUMBER     ({DIGIT}+({FRAC})?({EXP})?)|({DIGIT}+{EXP})
-
-EXP        ([eE][+-]?{DIGIT}+)
-
-ID         {LETTER}({LETTER}|{DIGIT})*
-
-INT        {DIGIT}+
+CHAR    \'([^\'\\]|\\.)\'
 
 %%
 
-[ \t\r]+        ;
+[ \t\r]+    ;           
+\n          ;            
 
-\n              ;
+"||".*      ;           
 
-"||".*          ;
+{STR}       { fprintf(tokens,"Line %d: shabt → %s\n",yylineno,yytext); }
 
-{STR} {
-    fprintf(tokenization, "Line %d: shabt -> %s\n", yylineno, yytext);
-    printf("Line %d: shabt -> %s\n", yylineno, yytext);
-}
-
-{CHAR} {
-    fprintf(tokenization, "Line %d: CHAR -> %s\n", yylineno, yytext);
-    printf("Line %d: CHAR -> %s\n", yylineno, yytext);
-}
+{CHAR}      { fprintf(tokens,"Line %d: CHAR → %s\n",yylineno,yytext); }
 
 "=="|"="|">"|"<"|"+"|"-"|"*"|"/" {
-    fprintf(tokenization, "Line %d: OPERATOR -> %s\n", yylineno, yytext);
-    printf("Line %d: OPERATOR -> %s\n", yylineno, yytext);
-}
+                fprintf(tokens,"Line %d: OPERATOR → %s\n",yylineno,yytext);
+            }
 
 "."|","|"("|")"|"{"|"}" {
-    fprintf(tokenization, "Line %d: PUNCTUATION -> %s\n", yylineno, yytext);
-    printf("Line %d: PUNCTUATION -> %s\n", yylineno, yytext);
-}
+                fprintf(tokens,"Line %d: PUNCTUATION → %s\n",yylineno,yytext);
+            }
 
 {DIGIT}+{LETTER}+({LETTER}|{DIGIT})* {
-    fprintf(errors, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    fprintf(tokenization, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    printf("Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-}
+                fprintf(errors,"Line %d: ERROR invalid token → %s\n",yylineno,yytext);
+            }
 
-{NUMBER} {
-    fprintf(tokenization, "Line %d: ANK -> %s\n", yylineno, yytext);
-    printf("Line %d: ANK -> %s\n", yylineno, yytext);
-}
+{NUMBER}    { fprintf(tokens,"Line %d: ANK → %s\n",yylineno,yytext); }
 
+{ID}        {
+                if (is_keyword(yytext))
+                    fprintf(tokens,"Line %d: KEYWORD → %s\n",yylineno,yytext);
+                else
+                    fprintf(tokens,"Line %d: IDENTIFIER → %s\n",yylineno,yytext);
+            }
 
-{ID} {
-    if (is_keyword(yytext)) {
-        fprintf(tokenization, "Line %d: KEYWORD -> %s\n", yylineno, yytext);
-        printf("Line %d: KEYWORD -> %s\n", yylineno, yytext);
-    } else {
-        fprintf(tokenization, "Line %d: IDENTIFIER -> %s\n", yylineno, yytext);
-        printf("Line %d: IDENTIFIER -> %s\n", yylineno, yytext);
-    }
-}
-
-. {
-    fprintf(errors, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    fprintf(tokenization, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    printf("Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-}
+.           { fprintf(errors,"Line %d: ERROR invalid token → %s\n",yylineno,yytext); }
 
 %%
 
 int main() {
-    tokenization = fopen("tokens.txt", "w");
 
-    if (!tokenization) { printf("Error opening tokens.txt\n"); return 1; }
+    tokens = fopen("tokens.txt", "w");
 
-    errors = fopen("error.txt", "w");
-
-    if (!errors) { printf("Error opening error.log\n"); return 1; }
+    errors = fopen("errors.txt", "w");
 
     yyin = fopen("check.code", "r");
 
-    if (!yyin) { printf("Error opening input.txt\n"); return 1; }
+    if (!tokens || !errors || !yyin) 
+    {
+        printf("File opening error!\n");
+        return 1;
+    }
 
-    yylineno = 1;
-    
     yylex();
 
-    fclose(yyin);
-
-    fclose(tokenization);
+    fclose(tokens);
 
     fclose(errors);
 
+    fclose(yyin);
+
     return 0;
 }
-

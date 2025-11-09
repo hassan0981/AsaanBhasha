@@ -1,91 +1,88 @@
-Line 3: KEYWORD -> ank
-Line 3: IDENTIFIER -> x
-Line 3: OPERATOR -> =
-Line 3: ANK -> 5
-Line 3: PUNCTUATION -> .
-Line 5: KEYWORD -> ank
-Line 5: IDENTIFIER -> y
-Line 5: OPERATOR -> =
-Line 5: ANK -> 10
-Line 5: PUNCTUATION -> .
-Line 7: KEYWORD -> agar
-Line 7: PUNCTUATION -> (
-Line 7: IDENTIFIER -> x
-Line 7: OPERATOR -> <
-Line 7: IDENTIFIER -> y
-Line 7: PUNCTUATION -> )
-Line 8: PUNCTUATION -> {
-Line 9: KEYWORD -> bolay
-Line 9: shabt -> "x chhota hai"
-Line 9: PUNCTUATION -> .
-Line 10: PUNCTUATION -> }
-Line 12: KEYWORD -> warna
-Line 12: KEYWORD -> agar
-Line 12: PUNCTUATION -> (
-Line 12: IDENTIFIER -> x
-Line 12: OPERATOR -> ==
-Line 12: IDENTIFIER -> y
-Line 12: PUNCTUATION -> )
-Line 13: PUNCTUATION -> {
-Line 14: KEYWORD -> bolay
-Line 14: shabt -> "dono barabar hain"
-Line 14: PUNCTUATION -> .
-Line 15: PUNCTUATION -> }
-Line 17: KEYWORD -> warna
-Line 18: PUNCTUATION -> {
-Line 19: KEYWORD -> bolay
-Line 19: shabt -> "x bara hai"
-Line 19: PUNCTUATION -> .
-Line 20: PUNCTUATION -> }
-Line 23: KEYWORD -> challay
-Line 23: PUNCTUATION -> (
-Line 23: KEYWORD -> ank
-Line 23: IDENTIFIER -> i
-Line 23: OPERATOR -> =
-Line 23: ANK -> 0
-Line 23: ERROR -> ; (invalid token)
-Line 23: IDENTIFIER -> i
-Line 23: OPERATOR -> <
-Line 23: ANK -> 6
-Line 23: ERROR -> ; (invalid token)
-Line 23: IDENTIFIER -> i
-Line 23: OPERATOR -> =
-Line 23: IDENTIFIER -> i
-Line 23: OPERATOR -> +
-Line 23: ANK -> 1
-Line 23: PUNCTUATION -> )
-Line 24: PUNCTUATION -> {
-Line 25: KEYWORD -> bolay
-Line 25: shabt -> "Loop chal raha hai"
-Line 25: PUNCTUATION -> .
-Line 26: PUNCTUATION -> }
-Line 28: KEYWORD -> ank
-Line 28: ERROR -> 16x (invalid token)
-Line 28: OPERATOR -> =
-Line 28: ANK -> 1
-Line 28: PUNCTUATION -> .
-Line 30: KEYWORD -> Hukamkaray
-Line 30: IDENTIFIER -> a
-Line 30: PUNCTUATION -> .
-Line 32: KEYWORD -> bolay
-Line 32: shabt -> "Input liya gaya:"
-Line 32: PUNCTUATION -> .
-Line 34: KEYWORD -> bolay
-Line 34: IDENTIFIER -> a
-Line 34: PUNCTUATION -> .
-Line 36: KEYWORD -> thehrjao
-Line 36: PUNCTUATION -> .
-Line 38: KEYWORD -> bolay
-Line 38: shabt -> "yeh line khatam nahi hui"
-Line 40: KEYWORD -> agar
-Line 40: PUNCTUATION -> (
-Line 40: IDENTIFIER -> x
-Line 40: OPERATOR -> >
-Line 40: OPERATOR -> =
-Line 40: IDENTIFIER -> y
-Line 40: PUNCTUATION -> )
-Line 41: PUNCTUATION -> {
-Line 42: KEYWORD -> bolay
-Line 42: shabt -> "error test"
-Line 42: PUNCTUATION -> .
-Line 43: PUNCTUATION -> }
+Line 3: KEYWORD → ank
+Line 3: IDENTIFIER → x
+Line 3: OPERATOR → =
+Line 3: ANK → 5
+Line 3: PUNCTUATION → .
+Line 5: KEYWORD → ank
+Line 5: IDENTIFIER → y
+Line 5: OPERATOR → =
+Line 5: ANK → 10
+Line 5: PUNCTUATION → .
+Line 7: KEYWORD → agar
+Line 7: PUNCTUATION → (
+Line 7: IDENTIFIER → x
+Line 7: OPERATOR → <
+Line 7: IDENTIFIER → y
+Line 7: PUNCTUATION → )
+Line 8: PUNCTUATION → {
+Line 9: KEYWORD → bolay
+Line 9: shabt → "x chhota hai"
+Line 9: PUNCTUATION → .
+Line 10: PUNCTUATION → }
+Line 12: KEYWORD → warna
+Line 12: KEYWORD → agar
+Line 12: PUNCTUATION → (
+Line 12: IDENTIFIER → x
+Line 12: OPERATOR → ==
+Line 12: IDENTIFIER → y
+Line 12: PUNCTUATION → )
+Line 13: PUNCTUATION → {
+Line 14: KEYWORD → bolay
+Line 14: shabt → "dono barabar hain"
+Line 14: PUNCTUATION → .
+Line 15: PUNCTUATION → }
+Line 17: KEYWORD → warna
+Line 18: PUNCTUATION → {
+Line 19: KEYWORD → bolay
+Line 19: shabt → "x bara hai"
+Line 19: PUNCTUATION → .
+Line 20: PUNCTUATION → }
+Line 23: KEYWORD → challay
+Line 23: PUNCTUATION → (
+Line 23: KEYWORD → ank
+Line 23: IDENTIFIER → i
+Line 23: OPERATOR → =
+Line 23: ANK → 0
+Line 23: IDENTIFIER → i
+Line 23: OPERATOR → <
+Line 23: ANK → 6
+Line 23: IDENTIFIER → i
+Line 23: OPERATOR → =
+Line 23: IDENTIFIER → i
+Line 23: OPERATOR → +
+Line 23: ANK → 1
+Line 23: PUNCTUATION → )
+Line 24: PUNCTUATION → {
+Line 25: KEYWORD → bolay
+Line 25: shabt → "Loop chal raha hai"
+Line 25: PUNCTUATION → .
+Line 26: PUNCTUATION → }
+Line 28: KEYWORD → ank
+Line 28: OPERATOR → =
+Line 28: ANK → 1
+Line 28: PUNCTUATION → .
+Line 30: KEYWORD → Hukamkaray
+Line 30: IDENTIFIER → a
+Line 30: PUNCTUATION → .
+Line 32: KEYWORD → bolay
+Line 32: shabt → "Input liya gaya:"
+Line 32: PUNCTUATION → .
+Line 34: KEYWORD → bolay
+Line 34: IDENTIFIER → a
+Line 34: PUNCTUATION → .
+Line 36: KEYWORD → thehrjao
+Line 36: PUNCTUATION → .
+Line 38: KEYWORD → bolay
+Line 38: shabt → "yeh line khatam nahi hui"
+Line 40: KEYWORD → agar
+Line 40: PUNCTUATION → (
+Line 40: IDENTIFIER → x
+Line 40: OPERATOR → >
+Line 40: OPERATOR → =
+Line 40: IDENTIFIER → y
+Line 40: PUNCTUATION → )
+Line 41: PUNCTUATION → {
+Line 42: KEYWORD → bolay
+Line 42: shabt → "error test"
+Line 42: PUNCTUATION → .
+Line 43: PUNCTUATION → }

@@ -291,21 +291,21 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 
 #define YY_NUM_RULES 12
 #define YY_END_OF_BUFFER 13
-static yyconst short int yy_acclist[47] =
+static yyconst short int yy_acclist[46] =
     {   0,
        13,   11,   12,    1,   11,   12,    2,   12,   11,   12,
        11,   12,    7,   11,   12,    6,   11,   12,    9,   11,
        12,    6,   11,   12,   10,   11,   12,   11,   12,    1,
         4,    9,    8,    8,    6,   10,    3,    5,    9,    8,
-        8,    8,    9,    3,    9,    9
+        8,    8,    9,    3,    9
     } ;
 
-static yyconst short int yy_accept[41] =
+static yyconst short int yy_accept[39] =
     {   0,
         1,    1,    1,    2,    4,    7,    9,   11,   13,   16,
        19,   22,   25,   28,   30,   31,   31,   32,   32,   32,
        32,   32,   33,   34,   35,   36,   37,   38,   39,   40,
-       41,   42,   42,   44,   45,   45,   46,   46,   47,   47
+       41,   42,   42,   44,   45,   45,   46,   46
     } ;
 
 static yyconst int yy_ec[256] =
@@ -347,54 +347,52 @@ static yyconst int yy_meta[24] =
         1,    1,    1
     } ;
 
-static yyconst short int yy_base[43] =
+static yyconst short int yy_base[41] =
     {   0,
-        0,    0,   80,   82,   70,   82,   20,   51,   82,   82,
-       29,   53,   11,   41,   59,   22,   82,   52,   48,   28,
-       32,    0,   18,   40,   82,   20,    0,   82,   31,   38,
-       46,   30,   48,    0,   59,   21,   14,   13,   82,   73,
-       76,   78
+        0,    0,   71,   82,   67,   82,   20,   43,   82,   82,
+       29,   45,   11,   33,   51,   22,   82,   43,   39,   28,
+       21,    0,   18,   40,   82,   20,    0,   82,   31,   38,
+       46,   14,   48,    0,   59,   13,   82,   73,   76,   78
     } ;
 
-static yyconst short int yy_def[43] =
+static yyconst short int yy_def[41] =
     {   0,
-       39,    1,   39,   39,   39,   39,   40,   41,   39,   39,
-       39,   39,   39,   39,   39,   40,   39,   40,   39,   41,
-       39,   11,   39,   39,   39,   39,   42,   39,   39,   39,
-       39,   39,   39,   42,   39,   39,   39,   39,    0,   39,
-       39,   39
+       37,    1,   37,   37,   37,   37,   38,   39,   37,   37,
+       37,   37,   37,   37,   37,   38,   37,   38,   37,   39,
+       37,   11,   37,   37,   37,   37,   40,   37,   37,   37,
+       37,   37,   37,   40,   37,   37,    0,   37,   37,   37
     } ;
 
 static yyconst short int yy_nxt[106] =
     {   0,
         4,    5,    6,    7,    8,    9,    9,   10,   10,    9,
        10,    9,   10,   11,   10,   12,   10,   13,   13,    4,
-        9,   14,    9,   17,   26,   17,   38,   38,   26,   26,
-       39,   30,   19,   26,   36,   31,   31,   26,   26,   18,
-       21,   18,   22,   36,   29,   29,   23,   24,   32,   35,
-       32,   30,   28,   33,   39,   30,   30,   31,   31,   30,
-       15,   33,   27,   31,   31,   30,   30,   37,   25,   37,
-       20,   15,   38,   16,   16,   16,   19,   19,   34,   39,
-       34,    3,   39,   39,   39,   39,   39,   39,   39,   39,
-       39,   39,   39,   39,   39,   39,   39,   39,   39,   39,
+        9,   14,    9,   17,   26,   17,   36,   36,   26,   26,
+       37,   30,   19,   26,   29,   31,   31,   26,   26,   18,
+       21,   18,   22,   28,   29,   37,   23,   24,   32,   35,
+       32,   30,   15,   33,   27,   30,   30,   31,   31,   30,
+       25,   33,   20,   31,   31,   30,   30,   32,   15,   32,
+       37,   37,   36,   16,   16,   16,   19,   19,   34,   37,
+       34,    3,   37,   37,   37,   37,   37,   37,   37,   37,
+       37,   37,   37,   37,   37,   37,   37,   37,   37,   37,
 
-       39,   39,   39,   39,   39
+       37,   37,   37,   37,   37
     } ;
 
 static yyconst short int yy_chk[106] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    7,   13,   16,   38,   37,   13,   13,
-       20,   23,   20,   26,   36,   23,   23,   26,   26,    7,
-       11,   16,   11,   32,   29,   21,   11,   11,   24,   29,
-       24,   30,   19,   24,   18,   30,   30,   24,   24,   31,
-       15,   33,   14,   31,   31,   33,   33,   35,   12,   35,
-        8,    5,   35,   40,   40,   40,   41,   41,   42,    3,
-       42,   39,   39,   39,   39,   39,   39,   39,   39,   39,
-       39,   39,   39,   39,   39,   39,   39,   39,   39,   39,
+        1,    1,    1,    7,   13,   16,   36,   32,   13,   13,
+       20,   23,   20,   26,   21,   23,   23,   26,   26,    7,
+       11,   16,   11,   19,   29,   18,   11,   11,   24,   29,
+       24,   30,   15,   24,   14,   30,   30,   24,   24,   31,
+       12,   33,    8,   31,   31,   33,   33,   35,    5,   35,
+        3,    0,   35,   38,   38,   38,   39,   39,   40,    0,
+       40,   37,   37,   37,   37,   37,   37,   37,   37,   37,
+       37,   37,   37,   37,   37,   37,   37,   37,   37,   37,
 
-       39,   39,   39,   39,   39
+       37,   37,   37,   37,   37
     } ;
 
 static yy_state_type yy_state_buf[YY_BUF_SIZE + 2], *yy_state_ptr;
@@ -415,37 +413,27 @@ char *yytext;
 #define INITIAL 0
 #line 2 "scanner.l"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <string.h>   
 
-FILE *tokenization;
+FILE *tokens;
 FILE *errors;
 
-int is_keyword(const char *s) {
-    const char *kw[] = {
+int is_keyword(const char *word) 
+{
+    char *keywords[] = {
         "agar","warna","bolay","warnaagar","Hukamkaray","thehrjao",
         "ank","shabt","jabtuk","Hannaa","Shudh","jhoot",
         "lotaao","challay","karo"
     };
-    size_t n = sizeof(kw)/sizeof(kw[0]);
-    for (size_t i = 0; i < n; i++) {
-        const char *a = s;
-        const char *b = kw[i];
-        int same = 1;
-        while (*a || *b) {
-            if (*a != *b) {
-                same = 0;
-                break;
-            }
-            a++;
-            b++;
-        }
-        if (same && *a == '\0' && *b == '\0')
+    int n = sizeof(keywords)/sizeof(keywords[0]);
+
+    for (int i = 0; i < n; i++) {
+        if (strcmp(word, keywords[i]) == 0)
             return 1;
     }
     return 0;
 }
-#line 449 "lex.yy.c"
+#line 437 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -596,10 +584,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 57 "scanner.l"
+#line 40 "scanner.l"
 
 
-#line 603 "lex.yy.c"
+#line 591 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -647,7 +635,7 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 40 )
+				if ( yy_current_state >= 38 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -692,96 +680,76 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 59 "scanner.l"
-;
+#line 42 "scanner.l"
+;           
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 61 "scanner.l"
-;
+#line 43 "scanner.l"
+;            
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 63 "scanner.l"
-;
+#line 45 "scanner.l"
+;           
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 65 "scanner.l"
-{
-    fprintf(tokenization, "Line %d: shabt -> %s\n", yylineno, yytext);
-    printf("Line %d: shabt -> %s\n", yylineno, yytext);
-}
+#line 47 "scanner.l"
+{ fprintf(tokens,"Line %d: shabt → %s\n",yylineno,yytext); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 70 "scanner.l"
-{
-    fprintf(tokenization, "Line %d: CHAR -> %s\n", yylineno, yytext);
-    printf("Line %d: CHAR -> %s\n", yylineno, yytext);
-}
+#line 49 "scanner.l"
+{ fprintf(tokens,"Line %d: CHAR → %s\n",yylineno,yytext); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 75 "scanner.l"
+#line 51 "scanner.l"
 {
-    fprintf(tokenization, "Line %d: OPERATOR -> %s\n", yylineno, yytext);
-    printf("Line %d: OPERATOR -> %s\n", yylineno, yytext);
-}
+                fprintf(tokens,"Line %d: OPERATOR → %s\n",yylineno,yytext);
+            }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 80 "scanner.l"
+#line 55 "scanner.l"
 {
-    fprintf(tokenization, "Line %d: PUNCTUATION -> %s\n", yylineno, yytext);
-    printf("Line %d: PUNCTUATION -> %s\n", yylineno, yytext);
-}
+                fprintf(tokens,"Line %d: PUNCTUATION → %s\n",yylineno,yytext);
+            }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 85 "scanner.l"
+#line 59 "scanner.l"
 {
-    fprintf(errors, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    fprintf(tokenization, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    printf("Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-}
+                fprintf(errors,"Line %d: ERROR invalid token → %s\n",yylineno,yytext);
+            }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 91 "scanner.l"
-{
-    fprintf(tokenization, "Line %d: ANK -> %s\n", yylineno, yytext);
-    printf("Line %d: ANK -> %s\n", yylineno, yytext);
-}
+#line 63 "scanner.l"
+{ fprintf(tokens,"Line %d: ANK → %s\n",yylineno,yytext); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 97 "scanner.l"
+#line 65 "scanner.l"
 {
-    if (is_keyword(yytext)) {
-        fprintf(tokenization, "Line %d: KEYWORD -> %s\n", yylineno, yytext);
-        printf("Line %d: KEYWORD -> %s\n", yylineno, yytext);
-    } else {
-        fprintf(tokenization, "Line %d: IDENTIFIER -> %s\n", yylineno, yytext);
-        printf("Line %d: IDENTIFIER -> %s\n", yylineno, yytext);
-    }
-}
+                if (is_keyword(yytext))
+                    fprintf(tokens,"Line %d: KEYWORD → %s\n",yylineno,yytext);
+                else
+                    fprintf(tokens,"Line %d: IDENTIFIER → %s\n",yylineno,yytext);
+            }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 107 "scanner.l"
-{
-    fprintf(errors, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    fprintf(tokenization, "Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-    printf("Line %d: ERROR -> %s (invalid token)\n", yylineno, yytext);
-}
+#line 72 "scanner.l"
+{ fprintf(errors,"Line %d: ERROR invalid token → %s\n",yylineno,yytext); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 113 "scanner.l"
+#line 74 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 785 "lex.yy.c"
+#line 753 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1070,7 +1038,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 40 )
+			if ( yy_current_state >= 38 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1100,11 +1068,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 40 )
+		if ( yy_current_state >= 38 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 39);
+	yy_is_jam = (yy_current_state == 37);
 	if ( ! yy_is_jam )
 		*yy_state_ptr++ = yy_current_state;
 
@@ -1665,32 +1633,30 @@ int main()
 	return 0;
 	}
 #endif
-#line 113 "scanner.l"
+#line 74 "scanner.l"
 
 
 int main() {
-    tokenization = fopen("tokens.txt", "w");
 
-    if (!tokenization) { printf("Error opening tokens.txt\n"); return 1; }
+    tokens = fopen("tokens.txt", "w");
 
-    errors = fopen("error.txt", "w");
-
-    if (!errors) { printf("Error opening error.log\n"); return 1; }
+    errors = fopen("errors.txt", "w");
 
     yyin = fopen("check.code", "r");
 
-    if (!yyin) { printf("Error opening input.txt\n"); return 1; }
+    if (!tokens || !errors || !yyin) 
+    {
+        printf("File opening error!\n");
+        return 1;
+    }
 
-    yylineno = 1;
-    
     yylex();
 
-    fclose(yyin);
-
-    fclose(tokenization);
+    fclose(tokens);
 
     fclose(errors);
 
+    fclose(yyin);
+
     return 0;
 }
-
