@@ -1,0 +1,45 @@
+|| Asaan Bhasha checking the program
+
+ank x = 5.
+
+ank y = 10.
+
+agar (x < y) 
+{
+    bolay "x chhota hai".
+}
+
+warna agar (x == y) 
+{
+    bolay "dono barabar hain".
+}
+
+warna 
+{
+    bolay "x bara hai".
+}
+
+
+challay (ank i = 0; i < 6; i = i + 1) 
+{
+    bolay "Loop chal raha hai".
+}
+
+ank 16x = 1.    
+
+Hukamkaray a.
+
+bolay "Input liya gaya:".
+
+bolay a.
+
+thehrjao.
+
+bolay "yeh line khatam nahi hui"
+
+agar (x >= y) 
+{       
+    bolay "error test".
+}
+
+      
