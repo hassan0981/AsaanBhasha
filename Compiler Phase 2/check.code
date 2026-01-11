@@ -1,0 +1,46 @@
+{
+    ank x.
+    x = 5.
+
+    ank y.
+    y = 10.
+
+    agar (x < y) 
+    {
+        bolay "x chhota hai".
+    }
+    warna 
+    {
+        agar (x == y) 
+        {
+            bolay "dono barabar hain".
+        }
+        warna 
+        {
+            bolay "x bara hai".
+        }
+    }
+    ank i.
+    challay (i = 0; i < 6) 
+    {
+        bolay "Loop chal raha hai".
+        i = i + 1.
+    }
+
+    ank a.
+    bolay "Input diya gaya:".
+    Hukamkaray a.
+    bolay a.
+
+    || ERROR 1: Function Definition
+    function myTest() 
+    {
+        bolay "Function error".
+    }
+
+    ank 16x.
+
+    bolay "yeh line khatam nahi hui"
+
+    thehrjao.
+}
