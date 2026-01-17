@@ -12,7 +12,7 @@ extern int yylineno;
 %token HANNAA SHUDH JHOOT
 %token ID NUMBER STRING
 
-%token EQ ASSIGN GT LT PLUS MINUS MUL DIV
+%token EQ ASSIGN GT LT PLUS MINUS MUL DIV INC
 %token DOT LPAREN RPAREN LBRACE RBRACE COMMA SEMICOLON
 
 %left PLUS MINUS
@@ -31,9 +31,10 @@ Block:
     LBRACE StatementList RBRACE
     ;
 
+
 StatementList:
     Statement StatementList
-    | Statement
+    | /* empty */
     ;
 
 Statement:
@@ -59,6 +60,7 @@ Assignment:
 
 LoopAssign:
     ID ASSIGN Expression
+    | ID INC  
     ;
 
 Conditional:
@@ -66,12 +68,10 @@ Conditional:
     | AGAR LPAREN Condition RPAREN Block WARNA Block
     ;
 
-
 Loop:
-
     JABTUK LPAREN Condition RPAREN Block
-    
-    | CHALLAY LPAREN LoopAssign SEMICOLON Condition RPAREN Block
+    | CHALLAY LPAREN LoopAssign SEMICOLON Condition SEMICOLON LoopAssign RPAREN Block
+    | KARO Block JABTUK LPAREN Condition RPAREN DOT
     ;
 
 Input:
@@ -117,5 +117,5 @@ int main() {
 }
 
 void yyerror(const char *s) {
-    fprintf(stderr, "Syntax Error at line %d. Found: %s\n", yylineno);
+    fprintf(stderr, "Syntax Error at line %d: %s\n", yylineno, s);
 }

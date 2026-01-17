@@ -20,13 +20,6 @@
             bolay "x bara hai".
         }
     }
-    ank i.
-    challay (i = 0; i < 6) 
-    {
-        bolay "Loop chal raha hai".
-        i = i + 1.
-    }
-
     ank a.
     bolay "Input diya gaya:".
     Hukamkaray a.
