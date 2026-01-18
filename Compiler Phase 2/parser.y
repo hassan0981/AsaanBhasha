@@ -34,7 +34,7 @@ Block:
 
 StatementList:
     Statement StatementList
-    | /* empty */
+    | 
     ;
 
 Statement:
@@ -70,7 +70,7 @@ Conditional:
 ElsePart:
     WARNA Block
   | WARNA_AGAR LPAREN Condition RPAREN Block ElsePart
-  | /* empty */
+  | 
   ;
 
 Loop:
