@@ -3,14 +3,14 @@
 #include <stdlib.h>
 
 int yylex();
-void yyerror(const char *s);
+void yyerror(const char *y);
 extern int yylineno;
 %}
 
-%token AGAR WARNA BOLAY JABTUK CHALLAY KARO
+%token AGAR WARNA BOLAY JABTUK CHALLAY KARO WARNA_AGAR
 %token ANK SHABT HUKAM THEHRJAO LOTAAO
 %token HANNAA SHUDH JHOOT
-%token ID NUMBER STRING
+%token ID NUMBER STRING CHAR
 
 %token EQ ASSIGN GT LT PLUS MINUS MUL DIV INC
 %token DOT LPAREN RPAREN LBRACE RBRACE COMMA SEMICOLON
@@ -64,9 +64,14 @@ LoopAssign:
     ;
 
 Conditional:
-    AGAR LPAREN Condition RPAREN Block
-    | AGAR LPAREN Condition RPAREN Block WARNA Block
+    AGAR LPAREN Condition RPAREN Block ElsePart
     ;
+
+ElsePart:
+    WARNA Block
+  | WARNA_AGAR LPAREN Condition RPAREN Block ElsePart
+  | /* empty */
+  ;
 
 Loop:
     JABTUK LPAREN Condition RPAREN Block
@@ -111,11 +116,11 @@ Condition:
 
 %%
 
+void yyerror(const char *y) {
+    fprintf(stderr, "Syntax Error at line %d: %s\n", yylineno, y);
+}
+
 int main() {
     yyparse();
     return 0;
-}
-
-void yyerror(const char *s) {
-    fprintf(stderr, "Syntax Error at line %d: %s\n", yylineno, s);
 }

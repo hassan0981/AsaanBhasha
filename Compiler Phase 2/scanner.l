@@ -9,14 +9,16 @@
 LETTER   [A-Za-z]
 DIGIT    [0-9]
 ID       {LETTER}({LETTER}|{DIGIT})*
-NUMBER   {DIGIT}+(\.{DIGIT}+)?
-STR      \"[^\"\n]*\"
+NUMBER   {DIGIT}+(\.{DIGIT}+)?([eE][+-]?{DIGIT}+)? 
+STR      \"([^\"\\]|\\.)*\"                          
+CHAR     \'([^\'\\]|\\.)\'                           
 
 %%
 
 [ \t\r\n]+       ; 
 "||".* ; 
 
+"warna agar"    { return WARNA_AGAR; }
 "agar"           { return AGAR; }
 "warna"          { return WARNA; }
 "bolay"          { return BOLAY; }
@@ -33,11 +35,12 @@ STR      \"[^\"\n]*\"
 "thehrjao"       { return THEHRJAO; }
 "lotaao"         { return LOTAAO; }
 
+
 "=="             { return EQ; }
 "="              { return ASSIGN; }
 ">"              { return GT; }
 "<"              { return LT; }
-"++"             { return INC; } /* Added for x++ */
+"++"             { return INC; }
 "+"              { return PLUS; }
 "-"              { return MINUS; }
 "*"              { return MUL; }
@@ -53,8 +56,9 @@ STR      \"[^\"\n]*\"
 
 {NUMBER}         { return NUMBER; }
 {STR}            { return STRING; }
+{CHAR}          { return CHAR; }
 {ID}             { return ID; }
 
-.                { printf("Lexical Error at line %d: %s\n", yylineno, yytext); }
+.                { printf("Lexical Error at line %d\n", yylineno); }
 
 %%

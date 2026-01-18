@@ -9,16 +9,13 @@
     {
         bolay "x chhota hai".
     }
-    warna 
+    warna agar (x > y)
     {
-        agar (x == y) 
-        {
-            bolay "dono barabar hain".
-        }
-        warna 
-        {
-            bolay "x bara hai".
-        }
+        bolay "x bara hai".
+    }
+    warna
+    {
+        bolay "x barabar hai".
     }
     ank a.
     bolay "Input diya gaya:".
