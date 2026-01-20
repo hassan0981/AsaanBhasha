@@ -2,7 +2,7 @@
     ank x.
     x = 5.
 
-    ank y.
+    ank 5y.
     y = 10.
 
     agar (x < y) 
@@ -21,8 +21,7 @@
     bolay "Input diya gaya:".
     Hukamkaray a.
     bolay a.
-
-    || ERROR 1: Function Definition
+    
     function myTest() 
     {
         bolay "Function error".
